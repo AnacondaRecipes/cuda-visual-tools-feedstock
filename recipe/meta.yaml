@@ -1,4 +1,4 @@
-{% set version = "12.8.1" %}
+{% set version = "13.0.2" %}
 
 package:
   name: cuda-visual-tools
@@ -10,14 +10,13 @@ source:
 
 build:
   number: 0
-  skip: true  # [osx or ppc64le]
+  skip: true  # [osx]
 
 requirements:
   run:
-    - cuda-nsight 12.8.90               # [linux64]
-    - nsight-compute 2025.1.1.2
-    - cuda-nvml-dev 12.8.90
-    - cuda-nvvp 12.8.93                 # [not aarch64]
+    - cuda-nsight 13.0.85               # [linux64]
+    - nsight-compute 2025.3.1.4
+    - cuda-nvml-dev 13.0.87
     - cuda-libraries-dev {{ version }}
 
 test:
@@ -33,7 +32,10 @@ about:
   description: |
     Contains the visual tools to debug and profile CUDA applications
   doc_url: https://docs.nvidia.com/cuda/index.html
+  dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
+  skip-lints:
+    - license_file_overspecified
   recipe-maintainers:
     - conda-forge/cuda
