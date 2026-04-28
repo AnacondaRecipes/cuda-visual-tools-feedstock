@@ -1,4 +1,4 @@
-{% set version = "12.8.1" %}
+{% set version = "12.8.2" %}
 
 package:
   name: cuda-visual-tools
@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [osx or ppc64le]
+  skip: true  # [osx]
 
 requirements:
   run:
@@ -29,10 +29,12 @@ about:
   license_file: LICENSE.txt
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: Contains the visual tools to debug and profile CUDA applications
   description: |
     Contains the visual tools to debug and profile CUDA applications
   doc_url: https://docs.nvidia.com/cuda/index.html
+  dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
   recipe-maintainers:
