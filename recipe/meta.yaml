@@ -28,6 +28,7 @@ about:
   license_file: LICENSE.txt
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: Contains the visual tools to debug and profile CUDA applications
   description: |
     Contains the visual tools to debug and profile CUDA applications
@@ -35,7 +36,5 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
-  skip-lints:
-    - license_file_overspecified
   recipe-maintainers:
     - conda-forge/cuda
